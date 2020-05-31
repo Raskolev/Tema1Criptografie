@@ -7,17 +7,17 @@ var shift;
 function encrypt(text, shift) {
   var result = "";
   if (mode == "ceaser"){
-    //caută prin fiecare caracter din text
+    //cauta prin fiecare caracter din text
   for (var i = 0; i < text.length; i++) {
         
-             //pune caracterul cod pentru fiecare literă
+             //pune caracterul cod pentru fiecare litera
             var c = text.charCodeAt(i);
 
-            // rezolvă problema cu literele mari
+            // rezolva problema cu literele mari
       if(c >= 65 && c <=  90) {
            result += String.fromCharCode((c - 65 + shift) % 26 + 65); 
 
-            // rezolvă problema cu literele mici
+            // rezolva problema cu literele mici
           }else if(c >= 97 && c <= 122){
             result += String.fromCharCode((c - 97 + shift) % 26 + 97);
 
@@ -74,7 +74,7 @@ function reverse(){
 
 
 /* 
- * cifrul Vigenère 
+ * cifrul Vigenere 
  */
 function doCrypt(isDecrypt) {
   if (document.getElementById("key").value.length == 0) {
@@ -95,7 +95,7 @@ function doCrypt(isDecrypt) {
 }
 
 
-//Întoarce rezultatul criptarii Vigenère pe textul dat cu cheia dată.
+//Intoarce rezultatul criptarii Vigenere pe textul dat cu cheia data.
 function crypt(input, key) {
   var output = "";
   for (var i = 0, j = 0; i < input.length; i++) {
@@ -114,7 +114,7 @@ function crypt(input, key) {
 }
 
 
-//Returnează un vector de numere, fiecare din intervalul [0, 26), reprezentând cheia dată. Cheia nu este sensibilă la litere mari și mici, iar non-literele sunt ignorate.
+//Returneaza un vector de numere, fiecare din intervalul [0, 26), reprezentand cheia data. Cheia nu este sensibila la litere mari si mici, iar non-literele sunt ignorate.
 
 function filterKey(key) {
   var result = [];
@@ -127,18 +127,18 @@ function filterKey(key) {
 }
 
 
-// Testează dacă codul de caractere specificat este o literă.
+// Testeaza daca codul de caractere specificat este o litera.
 function isLetter(c) {
   return isUppercase(c) || isLowercase(c);
 }
 
-// Teste dacă codul de caractere specificat este o literă mare.
+// Teste daca codul de caractere specificat este o litera mare.
 function isUppercase(c) {
   return 65 <= c && c <= 90;  // 65 is character code for 'A'. 90 is 'Z'.
 }
 
-// Teste dacă codul de caractere specificat este o literă mică.
+// Teste daca codul de caractere specificat este o litera mica.
 function isLowercase(c) {
   return 97 <= c && c <= 122; 
-
-  //Atât pentru cifrul Caesar cât și pentru cifrul Vigenère se folosește alfabetul englezesc.
+   }
+     //Atat pentru cifrul Caesar cat si pentru cifrul Vigenère se foloseste alfabetul englezesc.
