@@ -1,0 +1,32 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   
+    <div class="entry-content">
+      <form action="#" method="get" onsubmit="return false;">
+<p>Introdu text (fara diacritice): </p>
+<p>   <textarea id="text" cols="50" rows="10" style="width:40em; height:15em;">THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.</textarea></p>
+<div style="margin-bottom: 12px; margin-top: 12px">
+       
+        <td><label for="key">Cheie:</label> </td> 
+        <td><input type="text" value="abc" id="key" style="width:10em;"/></td>
+        <br>
+       <br> <label for="shift">Parametrul de deplasare:</label> <select id="shift" style="width:50px;"><br/>
+     
+      </select>
+    </div>
+<div>
+  <input type="button" style="background-color: grey;" id ="encrypt" value="Caesar" onclick="runScript();"/>
+  <input type="button" style="background-color: grey;" value="Vigenere" onclick="doCrypt(false)"/>
+  <input type="button" style="background-color: grey;" id="decrypt" value="DeCaesar" onclick="reverse();" />
+  <input type="button" style="background-color: grey;" value="DeVigenere" onclick="doCrypt(true)"/>
+    </div>
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
